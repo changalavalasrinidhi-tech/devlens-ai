@@ -218,4 +218,4 @@ export const codeTokenColors: Record<string, string> = {
   number: 'text-orange-400',
   plain: 'text-slate-300',
 }
-export const API_BASE_URL = "https://devlens-ai-9a3w.onrender.com";
+export const API_BASE_URL  = "https://devlens-ai-9a3w.onrender.com";
