@@ -6,16 +6,24 @@ from pydantic import BaseModel
 import uvicorn
 
 
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(title="DevLens AI Backend", version="1.0.0")
+
+origins = [
+    "https://devlens-ai-frontend.onrender.com",  # Your live Render frontend
+    "http://localhost:5173",                     # Local Vite dev server
+    "http://localhost:3000",                     # Alternative local port
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 fake_analyses_db = [
     {
         "id": 17,
