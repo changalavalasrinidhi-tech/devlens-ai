@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, ArrowRight, Cpu, GitBranch, Brain, Loader2 } from 'lucide-react';
-import { API_BASE_URL } from '@/data/projectData';
+import { API_BASE_URL } from '../data/projectData';
 
 export function HeroBanner() {
   const [repoUrl, setRepoUrl] = useState('');

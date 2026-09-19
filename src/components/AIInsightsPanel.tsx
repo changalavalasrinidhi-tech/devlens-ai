@@ -1,9 +1,9 @@
 import { ShieldAlert, ShieldCheck, Zap, GitBranch, Trash2 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { insights } from '@/data/projectData';
-import type { Insight } from '@/data/projectData';
-import { useSimulatedFetch } from '@/hooks/useSimulatedFetch';
-import { LoadingSkeleton, ErrorState } from '@/components/LoadingStates';
+import { insights } from '../data/projectData';
+import type { Insight } from '../data/projectData';
+import { useSimulatedFetch } from '../hooks/useSimulatedFetch';
+import { LoadingSkeleton, ErrorState } from './LoadingStates';
 
 const iconMap: Record<string, LucideIcon> = {
   ShieldAlert,

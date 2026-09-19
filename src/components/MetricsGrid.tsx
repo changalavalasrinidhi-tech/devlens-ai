@@ -1,9 +1,9 @@
 import React from 'react';
 import { FileCode, Network, Route, Package, TrendingUp, TrendingDown, Cpu, GitBranch, ShieldCheck } from 'lucide-react';
-import { metrics, techBadges } from '@/data/projectData';
+import { metrics, techBadges } from '../data/projectData';
 import type { LucideIcon } from 'lucide-react';
-import { useSimulatedFetch } from '@/hooks/useSimulatedFetch';
-import { LoadingSkeleton, ErrorState } from '@/components/LoadingStates';
+import { useSimulatedFetch } from '../hooks/useSimulatedFetch';
+import { LoadingSkeleton, ErrorState } from './LoadingStates';
 
 const iconMap: Record<string, LucideIcon> = {
   FileCode,

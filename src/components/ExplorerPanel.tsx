@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
 import {
   Monitor, Server, Lock, Users, ShoppingCart, Database, HardDrive, Navigation,
-  BarChart3, GitFork, Code2,
+  BarChart3, GitFork, Code2, FileCode, Network, Route, Package,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { archNodes, archEdges, codeLines, codeTokenColors, techBadges } from '@/data/projectData';
-import { TrendingUp, TrendingDown, FileCode, Network, Route, Package } from 'lucide-react';
-import { useSimulatedFetch } from '@/hooks/useSimulatedFetch';
-import { LoadingSkeleton } from '@/components/LoadingStates';
-import { API_BASE_URL } from '@/data/projectData';
+import { archNodes, archEdges, codeLines, codeTokenColors, techBadges, API_BASE_URL } from '../data/projectData';
+import { useSimulatedFetch } from '../hooks/useSimulatedFetch';
+import { LoadingSkeleton } from './LoadingStates';
 
 const iconMap: Record<string, LucideIcon> = {
   Monitor, Server, Lock, Users, ShoppingCart, Database, HardDrive, Navigation,
