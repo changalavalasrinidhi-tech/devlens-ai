@@ -21,7 +21,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('Overview Dashboard');
   const [dbStatus, setDbStatus] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [savedAnalyses, setSavedAnalyses] = useState<AnalysisItem[]>([]); // ✅ Declared state
+  const [savedAnalyses, setSavedAnalyses] = useState<AnalysisItem[]>([]);
 
   const fetchAnalyses = async () => {
     try {
@@ -160,6 +160,35 @@ function App() {
             <ExplorerPanel />
             <AIInsightsPanel />
           </>
+        )}
+
+        {activeTab === 'Interactive Dashboard & Tooling' && (
+          <div className="pt-4 space-y-6">
+            <div className="px-4 sm:px-6 lg:px-8">
+              <div className="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 backdrop-blur-md shadow-xl">
+                <h2 className="text-xl font-bold text-white mb-2">Interactive Dashboard & Tooling</h2>
+                <p className="text-xs text-slate-400 mb-6">Real-time telemetry, live database synchronization, and AST code explorer tooling.</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                    <h4 className="text-xs font-semibold text-emerald-400 mb-1">Real-Time Metrics Grid</h4>
+                    <p className="text-xs text-slate-400">Live telemetry tracking files scanned, API routes mapped, and architecture layers.</p>
+                  </div>
+                  <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                    <h4 className="text-xs font-semibold text-indigo-400 mb-1">Live Database Sync</h4>
+                    <p className="text-xs text-slate-400">Direct integration testing between FastAPI backend and Supabase data store.</p>
+                  </div>
+                  <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                    <h4 className="text-xs font-semibold text-cyan-400 mb-1">AST Code Explorer</h4>
+                    <p className="text-xs text-slate-400">Syntax-highlighted code analysis and instant AI security vulnerability flagging.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <MetricsGrid />
+            <ExplorerPanel />
+            <AIInsightsPanel />
+          </div>
         )}
 
         {activeTab === 'Architecture Map' && (
